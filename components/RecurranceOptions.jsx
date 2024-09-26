@@ -4,7 +4,6 @@ import { Box, Typography, Button } from '@mui/material';
 import { useTimeContext } from '@/app/hooks/timeContext';
 
 const RecurrenceOptions = ({ selectedRecurrence, onChange }) => {
-    const {setCurrActiveScreen} = useTimeContext();
   
     return (
         <Box sx={{display: {sm: 'block', md: 'flex'}}} className="items-center justify-between md:px-5 py-3" >
