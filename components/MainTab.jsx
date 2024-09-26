@@ -96,6 +96,8 @@ const MainDatePicker = () => {
 
 };
 
+MainDatePicker.displayName = 'MainDatePicker';
+
 export default MainDatePicker;
 
 

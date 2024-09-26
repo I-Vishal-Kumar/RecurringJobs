@@ -1,11 +1,11 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+// eslint-disable-next-line react/display-name
+
+import { render, screen} from '@testing-library/react';
 import MainDatePicker from '../MainTab';
 import TimeContextProvider from '@/app/hooks/timeContext'; // Assuming your context is provided via a provider
 
-// Mock the RecurrenceOptions and other components if necessary
-jest.mock('../RecurranceOptions', () => () => (
-  <div>Mocked RecurrenceOptions</div>
-));
+MainDatePicker.displayName = 'MainDatePicker'; 
+
 
 describe('MainDatePicker Component', () => {
 
