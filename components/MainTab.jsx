@@ -73,7 +73,13 @@ const MainDatePicker = () => {
             {
                 ActiveTab ? (
                     <ActiveTab handleNext={handleNext} >
-                        <Button className='bg-green-400 px-10 text-sm font-bold text-[#191717]'>
+                        <Button  sx={{
+                                backgroundColor: '#34D399', // Equivalent to Tailwind's bg-green-400
+                                px: 10,
+                                fontWeight: 'bold',
+                                fontSize: '0.875rem', // Equivalent to text-sm
+                                color: '#191717'
+                            }}>
                             Next
                             <ArrowRightAlt/>
                         </Button>

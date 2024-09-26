@@ -33,9 +33,22 @@ const RecurrenceOptions = ({ selectedRecurrence, onChange }) => {
                     ):(
                         <>
                             <Button className='button px-8' >{selectedRecurrence}</Button>
-                            <Button onClick={()=>{
-                                onChange(null)
-                            }} className='bg-red-500 px-8 text-white' >cancel</Button>
+                            <Button
+                                onClick={() => {
+                                    onChange(null);
+                                }}
+                                sx={{
+                                    backgroundColor: '#EF4444', 
+                                    px: 4, 
+                                    color: 'white',
+                                    '&:hover': {
+                                    backgroundColor: '#DC2626', 
+                                    },
+                                }}
+                                >
+                                Cancel
+                                </Button>
+
                         </>
                     )
                 }

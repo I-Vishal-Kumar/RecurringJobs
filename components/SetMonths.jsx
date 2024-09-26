@@ -14,7 +14,7 @@ export default function SetMonths({handleNext, children}) {
   
   const addAll = () => {
     setSelectedDates(prev => {
-        return Array.from({length: 31}, (_,i)=>i)
+        return Array.from({length: 31}, (_,i)=>i+1)
             .map(day => !prev.includes(day) ? day : null ).filter(day => day !== null );
       }
     );
@@ -22,18 +22,18 @@ export default function SetMonths({handleNext, children}) {
 
   return (
     <Box px={4} mt={4}>
-        <Button sx={{textTransform: 'initial'}} onClick={addAll} className='bg-blue-500 py-1 text-white'>
+        <Button sx={{textTransform: 'initial'}} onClick={addAll} className='button'>
            { selectedDates?.length === 31 ? 'Unselect All' : "Select all"}
         </Button>
         <Box className="h-full mt-8 justify-center items-center " display="flex" gap={1.25} flexWrap={'wrap'} >
-            {Array.from({length: 31}, (_,i)=>i).map((date) => (
+            {Array.from({length: 31}, (_,i)=>i+1).map((date) => (
                 <Button
                   key={date}
                   size='small'
                   className={
                     `
                     ${selectedDates.includes(date) ? 'selected_button' : 'button'}
-                    ${[28,29,30,31].includes(date) && "piculiar_date"}
+                    ${[29,30,31].includes(date) && "piculiar_date"}
                     `} // Add 'checked' class if the day is selected
                   onClick={() => handleCheck(date)}>
                   {date}
@@ -45,7 +45,7 @@ export default function SetMonths({handleNext, children}) {
             color: '#7a38ff'
           }} />
           <ArrowRightAlt/>
-          <Typography variant='caption'>Dates may vary each month.</Typography>
+          <Typography variant='caption'>Dates may varry each month.</Typography>
         </Box>
         <Box onClick={()=>handleNext("dates", selectedDates)} mt={5} className="flex justify-center">
             {

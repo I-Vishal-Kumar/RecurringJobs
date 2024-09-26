@@ -24,7 +24,7 @@ export default function SetDays({handleNext, children}) {
 
   return (
     <Box px={4} mt={4}>
-        <Button sx={{textTransform: 'initial'}} onClick={addAll} className='bg-blue-500 py-1 text-white'>
+        <Button sx={{textTransform: 'initial'}} onClick={addAll} className='button'>
            { selectedDays?.length === 7 ? 'Unselect All' : "Select all"}
         </Button>
         <Box className="h-full mt-8 justify-center items-center " display="flex" gap={1} flexWrap={'wrap'} >

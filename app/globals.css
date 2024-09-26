@@ -30,16 +30,16 @@
 }
 
 .button {
-  background-color: rgb(77, 77, 255);
-  color: white;
+  background-color: rgb(77, 77, 255) !important;
+  color: white !important;
 }
 
 .selected_button {
-  background-color: rgb(77, 77, 255);
-  color: white;
-  border: 2px solid rgb(255, 25, 148);
+  background-color: rgb(77, 77, 255) !important;
+  color: white !important;
+  border: 2px solid rgb(255, 25, 148) !important;
 }
 
 .piculiar_date {
-  background-color: #7a38ff;
+  background-color: #7a38ff !important;
 }
